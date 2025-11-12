@@ -1,0 +1,23 @@
+import React from 'react';
+
+export interface IconBoldCupProps extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+}
+
+export const IconBoldCup: React.FC<IconBoldCupProps> = ({
+  size = '1em',
+  ...props
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path fill="#2D264B" fill-rule="evenodd" d="M9.912 2.25h.34c1.754 0 2.82 0 3.673.271a5.75 5.75 0 0 1 3.946 4.658c.05.35.053.726.021 1.159a3.751 3.751 0 0 1-1.172 7.395l-.086.52c-.11.653-.176 1.052-.281 1.402a5.75 5.75 0 0 1-4.78 4.049c-.362.046-.767.046-1.43.046h-.123c-.662 0-1.067 0-1.43-.046a5.75 5.75 0 0 1-4.78-4.049c-.104-.35-.17-.75-.28-1.403l-.9-5.405c-.29-1.73-.465-2.782-.337-3.668A5.75 5.75 0 0 1 6.238 2.52c.854-.271 1.92-.271 3.674-.271m7.056 11.997.114.003a2.25 2.25 0 0 0 .619-4.414l-.166 1.01zM6.82 9.87a.75.75 0 1 0-1.478.26l1.042 5.91a.75.75 0 0 0 1.477-.261z" clip-rule="evenodd"/>
+    </svg>
+  );
+};

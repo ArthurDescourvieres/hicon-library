@@ -1,0 +1,23 @@
+import React from 'react';
+
+export interface IconLinearScan4Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+}
+
+export const IconLinearScan4: React.FC<IconLinearScan4Props> = ({
+  size = '1em',
+  ...props
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path stroke="#414141" stroke-linecap="round" stroke-width="1.5" d="M3 15v1a5 5 0 0 0 5 5h1M9 3H8a5 5 0 0 0-5 5v1m18 0V8a5 5 0 0 0-5-5h-1m0 18h1a5 5 0 0 0 5-5v-1M6 8a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm9 0a1 1 0 1 0 2 0 1 1 0 0 0-2 0Zm-1 8a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"/>
+    </svg>
+  );
+};

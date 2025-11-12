@@ -1,0 +1,23 @@
+import React from 'react';
+
+export interface IconBoldSend2Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+}
+
+export const IconBoldSend2: React.FC<IconBoldSend2Props> = ({
+  size = '1em',
+  ...props
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path fill="#2D264B" d="M22.469 7.364c.611-3.186-2.187-5.984-5.373-5.373l-9.15 1.755a5.25 5.25 0 0 0-4.084 3.843c-1.009 3.906 2.613 7.475 6.502 6.331a.141.141 0 0 1 .176.176c-1.144 3.889 2.426 7.511 6.331 6.502a5.25 5.25 0 0 0 3.843-4.085zm-17.524 8.97a.75.75 0 0 0-1.061-1.061L2.47 16.687a.75.75 0 1 0 1.06 1.06z"/><path fill="#2D264B" d="M8.48 15.98a.75.75 0 0 1 0 1.06l-1.414 1.415a.75.75 0 0 1-1.06-1.06l1.413-1.415a.75.75 0 0 1 1.061 0m.707 4.596a.75.75 0 1 0-1.06-1.06L6.712 20.93a.75.75 0 0 0 1.061 1.06z"/>
+    </svg>
+  );
+};

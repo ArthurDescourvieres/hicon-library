@@ -1,0 +1,23 @@
+import React from 'react';
+
+export interface IconBoldBag5Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+}
+
+export const IconBoldBag5: React.FC<IconBoldBag5Props> = ({
+  size = '1em',
+  ...props
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path fill="#2D264B" fill-rule="evenodd" d="M6.299 5.25a5.751 5.751 0 0 1 11.402 0h.663c.996 0 1.821 0 2.47.09.68.096 1.293.306 1.758.826s.607 1.152.627 1.84c.018.653-.073 1.474-.183 2.464l-.308 2.77c-.23 2.07-.41 3.697-.718 4.96-.314 1.296-.782 2.307-1.65 3.085-.87.777-1.931 1.13-3.26 1.3-1.299.165-2.947.165-5.047.165h-.107c-2.1 0-3.748 0-5.045-.165-1.33-.17-2.391-.523-3.26-1.3-.87-.778-1.337-1.789-1.651-3.084-.307-1.264-.488-2.89-.718-4.96L.964 10.47C.854 9.48.763 8.66.781 8.005c.02-.687.161-1.319.627-1.839s1.077-.73 1.759-.826c.648-.09 1.473-.09 2.469-.09zm9.885 0a4.251 4.251 0 0 0-8.368 0z" clip-rule="evenodd"/>
+    </svg>
+  );
+};

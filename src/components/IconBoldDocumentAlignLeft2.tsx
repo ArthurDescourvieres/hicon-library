@@ -1,0 +1,23 @@
+import React from 'react';
+
+export interface IconBoldDocumentAlignLeft2Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+}
+
+export const IconBoldDocumentAlignLeft2: React.FC<IconBoldDocumentAlignLeft2Props> = ({
+  size = '1em',
+  ...props
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path fill="#2D264B" fill-rule="evenodd" d="M5.061 2.955q.158-.114.327-.211.054.121.154.223c1.29 1.29 2.303 2.301 3.196 3.016.904.724 1.751 1.199 2.726 1.353a5.8 5.8 0 0 0 1.8 0c.948-.15 1.774-.603 2.65-1.293.864-.68 1.835-1.64 3.057-2.861a1 1 0 0 0 .102-.127 5 5 0 0 1 .972 1.006C21 5.375 21 7.251 21 11v2c0 3.75 0 5.625-.955 6.939a5 5 0 0 1-1.106 1.106C17.625 22 15.749 22 12 22s-5.625 0-6.939-.955a5 5 0 0 1-1.106-1.106C3 18.625 3 16.749 3 13v-2c0-3.75 0-5.625.955-6.939A5 5 0 0 1 5.06 2.955M8 9.25a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5zm0 4a.75.75 0 0 0 0 1.5h8a.75.75 0 0 0 0-1.5zm0 4a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5z" clip-rule="evenodd"/><path fill="#2D264B" d="M12 2c2.7 0 4.428 0 5.674.356-1.12 1.118-1.958 1.934-2.688 2.509-.77.606-1.36.895-1.957.99-.44.07-.89.07-1.33 0-.614-.098-1.22-.4-2.023-1.043-.747-.598-1.607-1.442-2.76-2.592C8.11 2 9.703 2 12 2"/>
+    </svg>
+  );
+};

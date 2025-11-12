@@ -1,0 +1,23 @@
+import React from 'react';
+
+export interface IconLinearMessage36Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+}
+
+export const IconLinearMessage36: React.FC<IconLinearMessage36Props> = ({
+  size = '1em',
+  ...props
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path stroke="#414141" stroke-width="1.5" d="M20.079 6.79c.39.873.555 2.063.84 4.11.435 3.14.654 4.71.174 5.93a5 5 0 0 1-2.2 2.527c-1.143.643-2.729.643-5.9.643H11.37c-3.17 0-4.756 0-5.898-.643a5 5 0 0 1-2.2-2.527c-.48-1.22-.262-2.79.174-5.93.266-1.916.428-3.082.768-3.94m15.865-.17a4 4 0 0 0-.257-.48 5 5 0 0 0-2.132-1.855C16.698 4 15.463 4 12.994 4H11.37c-2.469 0-3.704 0-4.696.455A5 5 0 0 0 4.543 6.31c-.128.2-.235.413-.33.65m15.866-.17-.089.088-.858.858c-3.333 3.333-5 5-7.071 5s-3.738-1.667-7.071-5l-.776-.776"/>
+    </svg>
+  );
+};

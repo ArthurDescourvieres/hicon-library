@@ -1,0 +1,23 @@
+import React from 'react';
+
+export interface IconBoldMessage32Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+}
+
+export const IconBoldMessage32: React.FC<IconBoldMessage32Props> = ({
+  size = '1em',
+  ...props
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path fill="#2D264B" fill-rule="evenodd" d="M3.107 15.928c-2.416-3.91-.452-8.727 1.82-11 3.905-3.904 10.237-3.904 14.142 0 3.905 3.906 3.905 10.238 0 14.143-2.368 2.368-7.098 4.245-11 1.82-.215-.134-.323-.201-.406-.234a.9.9 0 0 0-.446-.068 2.5 2.5 0 0 0-.388.085c-1.258.326-1.887.489-2.34.396a2 2 0 0 1-1.561-1.56c-.093-.454.07-1.083.396-2.34.052-.2.078-.3.085-.388a.9.9 0 0 0-.067-.446c-.033-.082-.1-.19-.235-.408m13.033-8.82a.75.75 0 1 1 0 1.5h-8a.75.75 0 1 1 0-1.5zm0 4a.75.75 0 1 1 0 1.5h-8a.75.75 0 0 1 0-1.5zm0 4a.75.75 0 1 1 0 1.5h-8a.75.75 0 0 1 0-1.5z" clip-rule="evenodd"/>
+    </svg>
+  );
+};

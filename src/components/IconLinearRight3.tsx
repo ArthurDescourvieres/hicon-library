@@ -1,0 +1,23 @@
+import React from 'react';
+
+export interface IconLinearRight3Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+}
+
+export const IconLinearRight3: React.FC<IconLinearRight3Props> = ({
+  size = '1em',
+  ...props
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path fill="#414141" d="M3 11.25a.75.75 0 1 0 0 1.5zm11 1.5a.75.75 0 0 0 0-1.5zm0-3.614h-.75zm3.22-1.585.457-.595zm0 8.899.457.594zM14 14.865h.75zm6.941-1.28-.457-.594zm0-3.17-.457.595zM3 12v.75h11v-1.5H3zm17.941 1.585-.457-.594-3.722 2.864.458.595.457.594 3.722-2.865zM14 14.865h.75v-5.73h-1.5v5.73zm3.22-7.314-.457.594 3.72 2.865.458-.595.458-.594-3.722-2.865zM14 9.136h.75c0-1.038 1.19-1.624 2.012-.991l.458-.594.457-.595c-1.808-1.392-4.427-.103-4.427 2.18zm3.22 7.314-.457-.595c-.823.633-2.013.047-2.013-.99h-1.5c0 2.282 2.62 3.571 4.427 2.179zm3.721-2.865.458.594a2.75 2.75 0 0 0 0-4.358l-.458.594-.457.595c.65.5.65 1.48 0 1.98z"/>
+    </svg>
+  );
+};

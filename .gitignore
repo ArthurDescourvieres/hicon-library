@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+.env
+.env.local
+
+# Ne pas commiter le token dans .npmrc si vous l'avez mis en dur
+# .npmrc
+
+
+

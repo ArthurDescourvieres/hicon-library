@@ -1,0 +1,23 @@
+import React from 'react';
+
+export interface IconLinearFilterProps extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+}
+
+export const IconLinearFilter: React.FC<IconLinearFilterProps> = ({
+  size = '1em',
+  ...props
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path stroke="#414141" stroke-linecap="round" stroke-width="1.5" d="m16 16-1.398 1.41c-1.115 1.125-1.672 1.688-2.351 1.774a2 2 0 0 1-.502 0c-.679-.087-1.236-.649-2.351-1.774L8 16m0-7.8 1.398-1.41c1.115-1.125 1.672-1.687 2.351-1.774q.251-.032.502 0c.679.087 1.236.649 2.351 1.774L16 8.2"/>
+    </svg>
+  );
+};

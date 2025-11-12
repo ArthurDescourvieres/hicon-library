@@ -1,0 +1,23 @@
+import React from 'react';
+
+export interface IconBoldShuffle1Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+}
+
+export const IconBoldShuffle1: React.FC<IconBoldShuffle1Props> = ({
+  size = '1em',
+  ...props
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path fill="#2D264B" d="M18.78 3.47a.75.75 0 1 0-1.06 1.06l.724.725a5.75 5.75 0 0 0-4.552 2.555L12 10.648 10.108 7.81a5.75 5.75 0 0 0-4.784-2.56H5a.75.75 0 0 0 0 1.5h.324A4.25 4.25 0 0 1 8.86 8.643L11.1 12l-2.24 3.358a4.25 4.25 0 0 1-3.536 1.892H5a.75.75 0 0 0 0 1.5h.324a5.75 5.75 0 0 0 4.784-2.56L12 13.351l1.892 2.837a5.75 5.75 0 0 0 4.31 2.541l-.682.569a.75.75 0 0 0 .96 1.152l1.409-1.174c.384-.32.595-.77.626-1.227a1.75 1.75 0 0 0-.509-1.355L18.78 15.47a.75.75 0 1 0-1.06 1.06l.712.713a4.25 4.25 0 0 1-3.292-1.885L12.9 12l2.239-3.357a4.25 4.25 0 0 1 2.997-1.859l-.617.515a.75.75 0 0 0 .96 1.152l1.409-1.174a1.746 1.746 0 0 0 .117-2.582z"/>
+    </svg>
+  );
+};

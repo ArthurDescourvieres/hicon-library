@@ -1,0 +1,23 @@
+import React from 'react';
+
+export interface IconBoldBackward5SecondsProps extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+}
+
+export const IconBoldBackward5Seconds: React.FC<IconBoldBackward5SecondsProps> = ({
+  size = '1em',
+  ...props
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path fill="#2D264B" fill-rule="evenodd" d="M8.25 11A2.75 2.75 0 0 1 11 8.25h3.76a.75.75 0 0 1 0 1.5H11c-.69 0-1.25.56-1.25 1.25v1c0 .138.112.25.25.25h4c.966 0 1.75.784 1.75 1.75v1A2.75 2.75 0 0 1 13 17.75H9a.75.75 0 0 1 0-1.5h4c.69 0 1.25-.56 1.25-1.25v-1a.25.25 0 0 0-.25-.25h-4A1.75 1.75 0 0 1 8.25 12z" clip-rule="evenodd"/><path fill="#2D264B" d="M2.513.997a.75.75 0 0 1 1.5.006l-.01 1.986C4 3.8 4 4.342 4.044 4.754l.003.015c.456-.502.96-.96 1.503-1.369A10.7 10.7 0 0 1 12 1.25c5.937 0 10.75 4.813 10.75 10.75S17.937 22.75 12 22.75 1.25 17.937 1.25 12a.75.75 0 0 1 1.5 0A9.25 9.25 0 1 0 12 2.75 9.2 9.2 0 0 0 6.45 4.6q-.752.564-1.373 1.265l.089.01c.411.046.955.044 1.764.04l1.986-.008a.75.75 0 0 1 .007 1.5l-2.03.009c-.754.003-1.384.006-1.89-.05-.53-.057-1.02-.187-1.445-.516a2.7 2.7 0 0 1-.489-.488c-.329-.425-.458-.915-.516-1.446-.056-.506-.053-1.135-.05-1.89z"/>
+    </svg>
+  );
+};

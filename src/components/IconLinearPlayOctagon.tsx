@@ -1,0 +1,23 @@
+import React from 'react';
+
+export interface IconLinearPlayOctagonProps extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+}
+
+export const IconLinearPlayOctagon: React.FC<IconLinearPlayOctagonProps> = ({
+  size = '1em',
+  ...props
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path stroke="#414141" stroke-width="1.5" d="M7.237 3.75c2.206-1.274 3.309-1.91 4.515-1.97a5 5 0 0 1 .496 0c1.206.06 2.309.696 4.515 1.97s3.31 1.91 3.964 2.925q.134.209.248.43c.551 1.074.551 2.348.551 4.895s0 3.821-.551 4.895q-.114.222-.248.43c-.655 1.015-1.758 1.651-3.964 2.925s-3.309 1.91-4.515 1.97a5 5 0 0 1-.496 0c-1.206-.06-2.31-.696-4.515-1.97-2.206-1.274-3.31-1.91-3.964-2.925a5 5 0 0 1-.248-.43c-.551-1.074-.551-2.348-.551-4.895s0-3.82.55-4.895q.115-.221.249-.43C3.928 5.661 5.03 5.024 7.237 3.75Z"/><path stroke="#414141" stroke-width="1.5" d="M13.421 9.28c1.45.892 2.176 1.338 2.42 1.921a2.08 2.08 0 0 1 0 1.598c-.244.583-.97 1.029-2.42 1.922s-2.176 1.34-2.771 1.272a1.82 1.82 0 0 1-1.298-.798C9 14.679 9 13.785 9 12c0-1.786 0-2.679.352-3.195a1.82 1.82 0 0 1 1.297-.798c.596-.067 1.321.38 2.772 1.272Z"/>
+    </svg>
+  );
+};
