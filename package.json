@@ -1,0 +1,53 @@
+{
+  "name": "@derroce/icons",
+  "version": "0.1.2",
+  "description": "Librairie d'icônes SVG optimisées pour React",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArthurDescourvieres/hicon-library.git"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "optimize:svg": "node scripts/optimize-svg.js",
+    "generate:icons": "node scripts/generate-icons.js",
+    "build": "npm run optimize:svg && npm run generate:icons && tsc",
+    "dev": "npm run build",
+    "prepublishOnly": "npm run build",
+    "publish": "npm publish --access public"
+  },
+  "keywords": [
+    "icons",
+    "svg",
+    "react",
+    "components",
+    "ui"
+  ],
+  "author": "Arthur Descourvieres",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "svgo": "^3.3.2",
+    "typescript": "^5.0.0"
+  }
+}
