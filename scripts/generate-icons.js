@@ -9,6 +9,7 @@ const __dirname = dirname(__filename);
 const ICONS_DIR = join(__dirname, '../src/icons');
 const COMPONENTS_DIR = join(__dirname, '../src/components');
 const INDEX_FILE = join(__dirname, '../src/index.ts');
+const ICON_NAMES_FILE = join(__dirname, '../src/icon-names.ts');
 
 function toPascalCase(str) {
   // Supprimer l'extension .svg si présente
@@ -160,7 +161,21 @@ async function generateIcons() {
       .join('\n');
 
     await writeFile(INDEX_FILE, indexContent, 'utf-8');
+
+    // Générer le fichier icon-names.ts avec la liste de tous les noms d'icônes
+    const iconNames = exports.map(exp => exp.name).sort();
+    const iconNamesContent = `// Liste de tous les noms d'icônes disponibles
+// Total: ${iconNames.length} icônes
+// Généré automatiquement par scripts/generate-icons.js
+
+export const ICON_NAMES = ${JSON.stringify(iconNames, null, 2)} as const;
+
+export type IconName = typeof ICON_NAMES[number];
+`;
+
+    await writeFile(ICON_NAMES_FILE, iconNamesContent, 'utf-8');
     console.log(`✨ Génération terminée ! ${exports.length} composant(s) créé(s).`);
+    console.log(`📋 Liste des noms d'icônes générée dans src/icon-names.ts`);
   } catch (error) {
     if (error.code === 'ENOENT') {
       console.log('ℹ️  Le dossier src/icons/ n\'existe pas encore. Créez-le et ajoutez vos SVG.');
