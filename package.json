@@ -23,7 +23,8 @@
   "scripts": {
     "optimize:svg": "node scripts/optimize-svg.js",
     "generate:icons": "node scripts/generate-icons.js",
-    "build": "npm run optimize:svg && npm run generate:icons && tsc",
+    "verify:dist": "node scripts/verify-dist.js",
+    "build": "npm run optimize:svg && npm run generate:icons && tsc && npm run verify:dist",
     "dev": "npm run build",
     "prepublishOnly": "npm run build",
     "publish": "npm publish --access public"

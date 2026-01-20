@@ -10,6 +10,9 @@ const ICONS_DIR = join(__dirname, '../src/icons');
 const COMPONENTS_DIR = join(__dirname, '../src/components');
 const INDEX_FILE = join(__dirname, '../src/index.ts');
 const ICON_NAMES_FILE = join(__dirname, '../src/icon-names.ts');
+const EXPORTS_DIR = join(__dirname, '../src/exports');
+
+const EXPORT_CHUNK_SIZE = 250; // <= 300 lignes par fichier (confortable)
 
 function toPascalCase(str) {
   // Supprimer l'extension .svg si présente
@@ -119,6 +122,7 @@ async function findSVGFiles(dir) {
 async function generateIcons() {
   try {
     await mkdir(COMPONENTS_DIR, { recursive: true });
+    await mkdir(EXPORTS_DIR, { recursive: true });
 
     const svgFiles = await findSVGFiles(ICONS_DIR);
 
@@ -149,17 +153,36 @@ async function generateIcons() {
 
       exports.push({
         name: componentName,
-        file: `./components/${componentName}`,
+        file: `./components/${componentName}`, // depuis src/index.ts
       });
 
       console.log(`✅ ${componentName} (${fileInfo.relativePath})`);
     }
 
-    // Générer le fichier index.ts
-    const indexContent = exports
-      .map(exp => `export { ${exp.name}, type ${exp.name}Props } from '${exp.file}';`)
-      .join('\n');
+    // Nettoyer l'ancien contenu de src/exports (évite des fichiers obsolètes)
+    const existingExportFiles = await readdir(EXPORTS_DIR).catch(() => []);
+    for (const filename of existingExportFiles) {
+      if (/^exports-\d+\.ts$/.test(filename)) {
+        await writeFile(join(EXPORTS_DIR, filename), '', 'utf-8');
+      }
+    }
 
+    // Générer des fichiers d'exports chunkés (< 300 lignes), puis un index.ts minimal.
+    const exportLines = exports.map(
+      (exp) => `export { ${exp.name}, type ${exp.name}Props } from '../components/${exp.name}';`
+    );
+
+    const chunkFiles = [];
+    for (let i = 0; i < exportLines.length; i += EXPORT_CHUNK_SIZE) {
+      const chunk = exportLines.slice(i, i + EXPORT_CHUNK_SIZE);
+      const chunkIdx = Math.floor(i / EXPORT_CHUNK_SIZE) + 1;
+      const chunkFilename = `exports-${chunkIdx}.ts`;
+      const chunkPath = join(EXPORTS_DIR, chunkFilename);
+      await writeFile(chunkPath, chunk.join('\n') + '\n', 'utf-8');
+      chunkFiles.push(chunkFilename.replace(/\.ts$/, ''));
+    }
+
+    const indexContent = chunkFiles.map((base) => `export * from './exports/${base}';`).join('\n') + '\n';
     await writeFile(INDEX_FILE, indexContent, 'utf-8');
 
     // Générer le fichier icon-names.ts avec la liste de tous les noms d'icônes
@@ -168,7 +191,7 @@ async function generateIcons() {
 // Total: ${iconNames.length} icônes
 // Généré automatiquement par scripts/generate-icons.js
 
-export const ICON_NAMES = ${JSON.stringify(iconNames, null, 2)} as const;
+export const ICON_NAMES = ${JSON.stringify(iconNames)} as const;
 
 export type IconName = typeof ICON_NAMES[number];
 `;
