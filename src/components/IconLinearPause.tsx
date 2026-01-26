@@ -17,7 +17,7 @@ export const IconLinearPause: React.FC<IconLinearPauseProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path stroke="#414141" stroke-linecap="round" stroke-width="1.5" d="M9 21V3m6 18V3"/>
+      <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M9 21V3m6 18V3"/>
     </svg>
   );
 };

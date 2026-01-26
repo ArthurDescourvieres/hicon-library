@@ -121,9 +121,9 @@ export { IconBoldNotification3, type IconBoldNotification3Props } from '../compo
 export { IconBoldNotification4, type IconBoldNotification4Props } from '../components/IconBoldNotification4';
 export { IconBoldNumericalStar, type IconBoldNumericalStarProps } from '../components/IconBoldNumericalStar';
 export { IconBoldOff, type IconBoldOffProps } from '../components/IconBoldOff';
+export { IconBoldPin, type IconBoldPinProps } from '../components/IconBoldPin';
 export { IconBoldPs51, type IconBoldPs51Props } from '../components/IconBoldPs51';
 export { IconBoldPs52, type IconBoldPs52Props } from '../components/IconBoldPs52';
-export { IconBoldPin, type IconBoldPinProps } from '../components/IconBoldPin';
 export { IconBoldReport, type IconBoldReportProps } from '../components/IconBoldReport';
 export { IconBoldSearch1, type IconBoldSearch1Props } from '../components/IconBoldSearch1';
 export { IconBoldSearch2, type IconBoldSearch2Props } from '../components/IconBoldSearch2';
@@ -138,11 +138,11 @@ export { IconBoldSituation2, type IconBoldSituation2Props } from '../components/
 export { IconBoldSticker, type IconBoldStickerProps } from '../components/IconBoldSticker';
 export { IconBoldSun1, type IconBoldSun1Props } from '../components/IconBoldSun1';
 export { IconBoldSun2, type IconBoldSun2Props } from '../components/IconBoldSun2';
-export { IconBoldTv, type IconBoldTvProps } from '../components/IconBoldTv';
 export { IconBoldTag, type IconBoldTagProps } from '../components/IconBoldTag';
 export { IconBoldTickCircle, type IconBoldTickCircleProps } from '../components/IconBoldTickCircle';
 export { IconBoldTickSquare, type IconBoldTickSquareProps } from '../components/IconBoldTickSquare';
 export { IconBoldTick, type IconBoldTickProps } from '../components/IconBoldTick';
+export { IconBoldTv, type IconBoldTvProps } from '../components/IconBoldTv';
 export { IconBoldVerified, type IconBoldVerifiedProps } from '../components/IconBoldVerified';
 export { IconBoldVirus, type IconBoldVirusProps } from '../components/IconBoldVirus';
 export { IconBoldWarning, type IconBoldWarningProps } from '../components/IconBoldWarning';

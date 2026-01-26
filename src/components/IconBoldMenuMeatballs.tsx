@@ -17,7 +17,7 @@ export const IconBoldMenuMeatballs: React.FC<IconBoldMenuMeatballsProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path fill="#2D264B" d="M12 10a2 2 0 1 1 0 4 2 2 0 0 1 0-4m-8 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4m16 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4"/>
+      <path fill="currentColor" d="M12 10a2 2 0 1 1 0 4 2 2 0 0 1 0-4m-8 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4m16 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4"/>
     </svg>
   );
 };

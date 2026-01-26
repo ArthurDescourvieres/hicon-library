@@ -17,7 +17,7 @@ export const IconLinearTextAlignJustifyRight: React.FC<IconLinearTextAlignJustif
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path stroke="#414141" stroke-linecap="round" stroke-width="1.5" d="M5 14h14M5 18h14M13 6h6m-6 4h6"/>
+      <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M5 14h14M5 18h14M13 6h6m-6 4h6"/>
     </svg>
   );
 };

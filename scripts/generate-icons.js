@@ -49,9 +49,42 @@ function generateComponentName(filename, relativePath) {
   return `Icon${stylePrefix}${iconName}`;
 }
 
+/**
+ * Remplace les couleurs codées en dur par currentColor pour permettre la personnalisation
+ * @param {string} svgContent - Contenu SVG à traiter
+ * @returns {string} - Contenu SVG avec les couleurs remplacées
+ */
+function replaceHardcodedColors(svgContent) {
+  // Couleurs par défaut des icônes à remplacer
+  const colorsToReplace = [
+    '#414141', // Gris foncé (Linear)
+    '#2D264B', // Violet foncé (Bold)
+  ];
+
+  let processed = svgContent;
+
+  // Attributs SVG à traiter (fill et stroke)
+  const attributes = ['fill', 'stroke'];
+
+  // Remplacer chaque couleur dans chaque attribut
+  for (const color of colorsToReplace) {
+    const escapedColor = color.replace('#', '\\#');
+    for (const attr of attributes) {
+      // Regex pour capturer fill="#COULEUR" ou fill='#COULEUR' (guillemets simples ou doubles)
+      const regex = new RegExp(`${attr}=["']${escapedColor}["']`, 'gi');
+      processed = processed.replace(regex, `${attr}="currentColor"`);
+    }
+  }
+
+  return processed;
+}
+
 async function generateComponent(svgContent, componentName) {
+  // Remplacer les couleurs codées en dur par currentColor
+  const processedSvgContent = replaceHardcodedColors(svgContent);
+
   // Extraire le contenu SVG (sans les balises <svg>)
-  const svgMatch = svgContent.match(/<svg[^>]*>(.*?)<\/svg>/s);
+  const svgMatch = processedSvgContent.match(/<svg[^>]*>(.*?)<\/svg>/s);
   if (!svgMatch) {
     throw new Error(`Format SVG invalide pour ${componentName}`);
   }

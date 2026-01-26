@@ -17,7 +17,7 @@ export const IconLinearMenu: React.FC<IconLinearMenuProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path stroke="#414141" stroke-linecap="round" stroke-width="1.5" d="M9 18h10M13 6h6M5 12h14"/>
+      <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M9 18h10M13 6h6M5 12h14"/>
     </svg>
   );
 };

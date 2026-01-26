@@ -17,7 +17,7 @@ export const IconLinearVoice: React.FC<IconLinearVoiceProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path stroke="#414141" stroke-linecap="round" stroke-width="1.5" d="M12 8v8m3-7v6m3-4v2M9 9v6m-3-4v2"/>
+      <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M12 8v8m3-7v6m3-4v2M9 9v6m-3-4v2"/>
     </svg>
   );
 };

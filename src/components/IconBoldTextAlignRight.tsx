@@ -17,7 +17,7 @@ export const IconBoldTextAlignRight: React.FC<IconBoldTextAlignRightProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path fill="#2D264B" d="M5 6.75h14a.75.75 0 0 0 0-1.5H5a.75.75 0 0 0 0 1.5m8 4h6a.75.75 0 0 0 0-1.5h-6a.75.75 0 0 0 0 1.5m-8 2.5a.75.75 0 0 0 0 1.5h14a.75.75 0 0 0 0-1.5zm8 5.5h6a.75.75 0 0 0 0-1.5h-6a.75.75 0 0 0 0 1.5"/>
+      <path fill="currentColor" d="M5 6.75h14a.75.75 0 0 0 0-1.5H5a.75.75 0 0 0 0 1.5m8 4h6a.75.75 0 0 0 0-1.5h-6a.75.75 0 0 0 0 1.5m-8 2.5a.75.75 0 0 0 0 1.5h14a.75.75 0 0 0 0-1.5zm8 5.5h6a.75.75 0 0 0 0-1.5h-6a.75.75 0 0 0 0 1.5"/>
     </svg>
   );
 };

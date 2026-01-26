@@ -17,7 +17,7 @@ export const IconBoldProfileRemove1: React.FC<IconBoldProfileRemove1Props> = ({
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path fill="#2D264B" d="M9 2a4.75 4.75 0 1 0 0 9.5A4.75 4.75 0 0 0 9 2m7 9a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM6 13a4.75 4.75 0 1 0 0 9.5h6a4.75 4.75 0 1 0 0-9.5z"/>
+      <path fill="currentColor" d="M9 2a4.75 4.75 0 1 0 0 9.5A4.75 4.75 0 0 0 9 2m7 9a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM6 13a4.75 4.75 0 1 0 0 9.5h6a4.75 4.75 0 1 0 0-9.5z"/>
     </svg>
   );
 };

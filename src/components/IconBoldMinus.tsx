@@ -17,7 +17,7 @@ export const IconBoldMinus: React.FC<IconBoldMinusProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path fill="#2D264B" d="M4 11.25a.75.75 0 0 0 0 1.5h16a.75.75 0 0 0 0-1.5z"/>
+      <path fill="currentColor" d="M4 11.25a.75.75 0 0 0 0 1.5h16a.75.75 0 0 0 0-1.5z"/>
     </svg>
   );
 };

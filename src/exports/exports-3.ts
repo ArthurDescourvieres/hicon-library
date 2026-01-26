@@ -92,9 +92,9 @@ export { IconLinearNotification3, type IconLinearNotification3Props } from '../c
 export { IconLinearNotification4, type IconLinearNotification4Props } from '../components/IconLinearNotification4';
 export { IconLinearNumericalStar, type IconLinearNumericalStarProps } from '../components/IconLinearNumericalStar';
 export { IconLinearOff, type IconLinearOffProps } from '../components/IconLinearOff';
+export { IconLinearPin, type IconLinearPinProps } from '../components/IconLinearPin';
 export { IconLinearPs51, type IconLinearPs51Props } from '../components/IconLinearPs51';
 export { IconLinearPs52, type IconLinearPs52Props } from '../components/IconLinearPs52';
-export { IconLinearPin, type IconLinearPinProps } from '../components/IconLinearPin';
 export { IconLinearReport, type IconLinearReportProps } from '../components/IconLinearReport';
 export { IconLinearSearch1, type IconLinearSearch1Props } from '../components/IconLinearSearch1';
 export { IconLinearSearch2, type IconLinearSearch2Props } from '../components/IconLinearSearch2';
@@ -109,11 +109,11 @@ export { IconLinearSituation2, type IconLinearSituation2Props } from '../compone
 export { IconLinearSticker, type IconLinearStickerProps } from '../components/IconLinearSticker';
 export { IconLinearSun1, type IconLinearSun1Props } from '../components/IconLinearSun1';
 export { IconLinearSun2, type IconLinearSun2Props } from '../components/IconLinearSun2';
-export { IconLinearTv, type IconLinearTvProps } from '../components/IconLinearTv';
 export { IconLinearTag, type IconLinearTagProps } from '../components/IconLinearTag';
 export { IconLinearTickCircle, type IconLinearTickCircleProps } from '../components/IconLinearTickCircle';
 export { IconLinearTickSquare, type IconLinearTickSquareProps } from '../components/IconLinearTickSquare';
 export { IconLinearTick, type IconLinearTickProps } from '../components/IconLinearTick';
+export { IconLinearTv, type IconLinearTvProps } from '../components/IconLinearTv';
 export { IconLinearVerified, type IconLinearVerifiedProps } from '../components/IconLinearVerified';
 export { IconLinearVirus, type IconLinearVirusProps } from '../components/IconLinearVirus';
 export { IconLinearWarning, type IconLinearWarningProps } from '../components/IconLinearWarning';
