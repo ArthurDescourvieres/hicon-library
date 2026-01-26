@@ -1,6 +1,6 @@
 {
   "name": "@derroce/icons",
-  "version": "0.3.4",
+  "version": "0.3.6",
   "description": "Librairie d'icônes SVG optimisées pour React",
   "repository": {
     "type": "git",
