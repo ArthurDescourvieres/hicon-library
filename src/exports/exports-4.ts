@@ -1,3 +1,4 @@
+export { IconLinearMessage27, type IconLinearMessage27Props } from '../components/IconLinearMessage27';
 export { IconLinearMessage28, type IconLinearMessage28Props } from '../components/IconLinearMessage28';
 export { IconLinearMessage29, type IconLinearMessage29Props } from '../components/IconLinearMessage29';
 export { IconLinearMessage3, type IconLinearMessage3Props } from '../components/IconLinearMessage3';
@@ -100,6 +101,7 @@ export { IconLinearVolumeMute, type IconLinearVolumeMuteProps } from '../compone
 export { IconLinearVolumeOff, type IconLinearVolumeOffProps } from '../components/IconLinearVolumeOff';
 export { IconLinearVolumeSlash, type IconLinearVolumeSlashProps } from '../components/IconLinearVolumeSlash';
 export { IconLinearVolumeUp, type IconLinearVolumeUpProps } from '../components/IconLinearVolumeUp';
+export { IconLinearAuction, type IconLinearAuctionProps } from '../components/IconLinearAuction';
 export { IconLinearHide, type IconLinearHideProps } from '../components/IconLinearHide';
 export { IconLinearLock1, type IconLinearLock1Props } from '../components/IconLinearLock1';
 export { IconLinearLock2, type IconLinearLock2Props } from '../components/IconLinearLock2';

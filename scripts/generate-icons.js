@@ -56,9 +56,14 @@ function generateComponentName(filename, relativePath) {
  */
 function replaceHardcodedColors(svgContent) {
   // Couleurs par défaut des icônes à remplacer
+  // On couvre ici l'ensemble des gris/violets utilisés comme couleurs \"de base\"
+  // dans les sets Bold/Linear, pour s'assurer qu'ils suivent toujours currentColor.
   const colorsToReplace = [
     '#414141', // Gris foncé (Linear)
-    '#2D264B', // Violet foncé (Bold)
+    '#2D264B', // Violet foncé (Bold, ancien set)
+    '#323232', // Gris foncé (Bold - variantes)
+    '#6D6D6D', // Gris moyen (Bold - variantes)
+    '#2c2c2c', // Gris foncé (Bold - variantes, casse différente)
   ];
 
   let processed = svgContent;
@@ -79,9 +84,36 @@ function replaceHardcodedColors(svgContent) {
   return processed;
 }
 
+/**
+ * Convertit les noms d'attributs SVG kebab-case en camelCase pour JSX (React).
+ * Évite les warnings "Invalid DOM property `stroke-linecap`" etc.
+ */
+function convertSvgAttributesForReact(svgContent) {
+  let result = svgContent;
+  const attrRenames = [
+    ['stroke-linecap', 'strokeLinecap'],
+    ['stroke-width', 'strokeWidth'],
+    ['clip-path', 'clipPath'],
+    ['fill-rule', 'fillRule'],
+    ['clip-rule', 'clipRule'],
+    ['stroke-linejoin', 'strokeLinejoin'],
+    ['stroke-dasharray', 'strokeDasharray'],
+    ['stroke-dashoffset', 'strokeDashoffset'],
+    ['stroke-miterlimit', 'strokeMiterlimit'],
+    ['fill-opacity', 'fillOpacity'],
+    ['stroke-opacity', 'strokeOpacity'],
+  ];
+  for (const [from, to] of attrRenames) {
+    const escaped = from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const re = new RegExp(`\\b${escaped}\\s*=`, 'g');
+    result = result.replace(re, `${to}=`);
+  }
+  return result;
+}
+
 async function generateComponent(svgContent, componentName) {
-  // Remplacer les couleurs codées en dur par currentColor
-  const processedSvgContent = replaceHardcodedColors(svgContent);
+  // Remplacer les couleurs codées en dur par currentColor, puis attributs JSX
+  const processedSvgContent = convertSvgAttributesForReact(replaceHardcodedColors(svgContent));
 
   // Extraire le contenu SVG (sans les balises <svg>)
   const svgMatch = processedSvgContent.match(/<svg[^>]*>(.*?)<\/svg>/s);

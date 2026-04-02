@@ -8,6 +8,16 @@ const __dirname = dirname(__filename);
 const DIST_DIR = join(__dirname, '..', 'dist');
 const DIST_INDEX = join(DIST_DIR, 'index.js');
 const DIST_COMPONENTS_DIR = join(DIST_DIR, 'components');
+const FORBIDDEN_COLORS = ['#323232', '#6D6D6D', '#2c2c2c'];
+
+/** Attributs SVG kebab-case interdits dans le JS émis (doivent être en camelCase pour React). */
+const FORBIDDEN_SVG_KEBAB_ATTRS = [
+  'stroke-linecap',
+  'stroke-width',
+  'clip-path',
+  'fill-rule',
+  'clip-rule',
+];
 
 function parseReexports(jsContent) {
   const componentBasenames = new Set();
@@ -84,6 +94,11 @@ async function main() {
     process.exit(1);
   }
 
+  // Vérification supplémentaire : s'assurer qu'aucune couleur hex interdite
+  // n'est présente dans les composants Bold (hors masks/clipPath).
+  const forbiddenMatches = [];
+  const kebabAttrMatches = [];
+
   const missing = [];
   for (const base of basenames) {
     const jsPath = join(DIST_COMPONENTS_DIR, `${base}.js`);
@@ -101,9 +116,28 @@ async function main() {
         hasDts,
       });
     }
+
+    if (hasJs) {
+      const jsContent = await readFile(jsPath, 'utf-8');
+
+      for (const attr of FORBIDDEN_SVG_KEBAB_ATTRS) {
+        if (jsContent.includes(attr)) {
+          kebabAttrMatches.push({ base, jsPath, attr });
+        }
+      }
+
+      // Si le composant est un Bold, on scanne le JS pour détecter des couleurs interdites
+      if (base.startsWith('IconBold')) {
+        for (const color of FORBIDDEN_COLORS) {
+          if (jsContent.includes(color)) {
+            forbiddenMatches.push({ base, jsPath, color });
+          }
+        }
+      }
+    }
   }
 
-  if (missing.length > 0) {
+  if (missing.length > 0 || forbiddenMatches.length > 0 || kebabAttrMatches.length > 0) {
     console.error('[verify-dist] Build invalide: exports cassés détectés.');
     for (const m of missing) {
       console.error(
@@ -111,6 +145,20 @@ async function main() {
           m.hasDts ? 'ok' : 'MISSING'
         } (${m.dtsPath})`
       );
+    }
+    if (kebabAttrMatches.length > 0) {
+      console.error(
+        '[verify-dist] Build invalide: attributs SVG kebab-case détectés (utiliser camelCase pour React).'
+      );
+      for (const k of kebabAttrMatches) {
+        console.error(`- ${k.base}: "${k.attr}" dans ${k.jsPath}`);
+      }
+    }
+    if (forbiddenMatches.length > 0) {
+      console.error('[verify-dist] Build invalide: couleurs hex interdites trouvées dans les icônes Bold.');
+      for (const f of forbiddenMatches) {
+        console.error(`- ${f.base}: couleur interdite ${f.color} dans ${f.jsPath}`);
+      }
     }
     process.exit(1);
   }

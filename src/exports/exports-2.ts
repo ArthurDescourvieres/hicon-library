@@ -191,6 +191,7 @@ export { IconBoldTextAlignRight, type IconBoldTextAlignRightProps } from '../com
 export { IconBoldText, type IconBoldTextProps } from '../components/IconBoldText';
 export { IconBoldCalender1, type IconBoldCalender1Props } from '../components/IconBoldCalender1';
 export { IconBoldCalender2, type IconBoldCalender2Props } from '../components/IconBoldCalender2';
+export { IconBoldHourglass, type IconBoldHourglassProps } from '../components/IconBoldHourglass';
 export { IconBoldTimeCircle1, type IconBoldTimeCircle1Props } from '../components/IconBoldTimeCircle1';
 export { IconBoldTimeCircle2, type IconBoldTimeCircle2Props } from '../components/IconBoldTimeCircle2';
 export { IconBoldTimeCircle3, type IconBoldTimeCircle3Props } from '../components/IconBoldTimeCircle3';
@@ -247,4 +248,3 @@ export { IconLinearRight2, type IconLinearRight2Props } from '../components/Icon
 export { IconLinearRight3, type IconLinearRight3Props } from '../components/IconLinearRight3';
 export { IconLinearRightCircle1, type IconLinearRightCircle1Props } from '../components/IconLinearRightCircle1';
 export { IconLinearRightCircle2, type IconLinearRightCircle2Props } from '../components/IconLinearRightCircle2';
-export { IconLinearRightSquare1, type IconLinearRightSquare1Props } from '../components/IconLinearRightSquare1';
