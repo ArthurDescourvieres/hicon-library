@@ -102,6 +102,7 @@ export { IconLinearVolumeOff, type IconLinearVolumeOffProps } from '../component
 export { IconLinearVolumeSlash, type IconLinearVolumeSlashProps } from '../components/IconLinearVolumeSlash';
 export { IconLinearVolumeUp, type IconLinearVolumeUpProps } from '../components/IconLinearVolumeUp';
 export { IconLinearAuction, type IconLinearAuctionProps } from '../components/IconLinearAuction';
+export { IconLinearDuplicate, type IconLinearDuplicateProps } from '../components/IconLinearDuplicate';
 export { IconLinearHide, type IconLinearHideProps } from '../components/IconLinearHide';
 export { IconLinearLock1, type IconLinearLock1Props } from '../components/IconLinearLock1';
 export { IconLinearLock2, type IconLinearLock2Props } from '../components/IconLinearLock2';

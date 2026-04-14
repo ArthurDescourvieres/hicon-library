@@ -2,7 +2,7 @@
 
 Librairie d'icônes SVG optimisées pour React.
 
-## 📦 Installation
+## Installation
 
 ```bash
 pnpm install @derroce/icons
@@ -31,7 +31,7 @@ function Example() {
 
 Voir [USAGE.md](./USAGE.md) pour plus de détails et d'exemples.
 
-## 📖 Documentation complète
+## Documentation complète
 
 **Pour utiliser la librairie dans votre projet** : Consultez [USAGE.md](./USAGE.md) pour le guide complet d'utilisation.
 
