@@ -1,3 +1,5 @@
+export { IconLinearRightCircle1, type IconLinearRightCircle1Props } from '../components/IconLinearRightCircle1';
+export { IconLinearRightCircle2, type IconLinearRightCircle2Props } from '../components/IconLinearRightCircle2';
 export { IconLinearRightSquare1, type IconLinearRightSquare1Props } from '../components/IconLinearRightSquare1';
 export { IconLinearRightSquare2, type IconLinearRightSquare2Props } from '../components/IconLinearRightSquare2';
 export { IconLinearRotateLeft, type IconLinearRotateLeftProps } from '../components/IconLinearRotateLeft';
@@ -246,5 +248,3 @@ export { IconLinearMessage21, type IconLinearMessage21Props } from '../component
 export { IconLinearMessage22, type IconLinearMessage22Props } from '../components/IconLinearMessage22';
 export { IconLinearMessage23, type IconLinearMessage23Props } from '../components/IconLinearMessage23';
 export { IconLinearMessage24, type IconLinearMessage24Props } from '../components/IconLinearMessage24';
-export { IconLinearMessage25, type IconLinearMessage25Props } from '../components/IconLinearMessage25';
-export { IconLinearMessage26, type IconLinearMessage26Props } from '../components/IconLinearMessage26';

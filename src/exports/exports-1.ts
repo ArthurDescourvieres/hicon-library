@@ -241,10 +241,10 @@ export { IconBoldPoker, type IconBoldPokerProps } from '../components/IconBoldPo
 export { IconBoldSad, type IconBoldSadProps } from '../components/IconBoldSad';
 export { IconBoldStar1, type IconBoldStar1Props } from '../components/IconBoldStar1';
 export { IconBoldStar2, type IconBoldStar2Props } from '../components/IconBoldStar2';
+export { IconBoldStar, type IconBoldStarProps } from '../components/IconBoldStar';
 export { IconBoldLocationAdd, type IconBoldLocationAddProps } from '../components/IconBoldLocationAdd';
 export { IconBoldLocationCross, type IconBoldLocationCrossProps } from '../components/IconBoldLocationCross';
 export { IconBoldLocationMinus, type IconBoldLocationMinusProps } from '../components/IconBoldLocationMinus';
 export { IconBoldLocationTick, type IconBoldLocationTickProps } from '../components/IconBoldLocationTick';
 export { IconBoldLocation, type IconBoldLocationProps } from '../components/IconBoldLocation';
 export { IconBoldMap, type IconBoldMapProps } from '../components/IconBoldMap';
-export { IconBoldWebsite, type IconBoldWebsiteProps } from '../components/IconBoldWebsite';

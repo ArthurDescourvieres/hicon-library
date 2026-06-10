@@ -1,3 +1,4 @@
+export { IconBoldWebsite, type IconBoldWebsiteProps } from '../components/IconBoldWebsite';
 export { IconBoldMenuCandyBox, type IconBoldMenuCandyBoxProps } from '../components/IconBoldMenuCandyBox';
 export { IconBoldMenuCheesesburger, type IconBoldMenuCheesesburgerProps } from '../components/IconBoldMenuCheesesburger';
 export { IconBoldMenuFries, type IconBoldMenuFriesProps } from '../components/IconBoldMenuFries';
@@ -176,6 +177,7 @@ export { IconBoldBag5, type IconBoldBag5Props } from '../components/IconBoldBag5
 export { IconBoldBag6, type IconBoldBag6Props } from '../components/IconBoldBag6';
 export { IconBoldBag7, type IconBoldBag7Props } from '../components/IconBoldBag7';
 export { IconBoldBag8, type IconBoldBag8Props } from '../components/IconBoldBag8';
+export { IconBoldBox, type IconBoldBoxProps } from '../components/IconBoldBox';
 export { IconBoldBuy1, type IconBoldBuy1Props } from '../components/IconBoldBuy1';
 export { IconBoldBuy2, type IconBoldBuy2Props } from '../components/IconBoldBuy2';
 export { IconBoldBuy3, type IconBoldBuy3Props } from '../components/IconBoldBuy3';
@@ -246,5 +248,3 @@ export { IconLinearRefresh2, type IconLinearRefresh2Props } from '../components/
 export { IconLinearRight1, type IconLinearRight1Props } from '../components/IconLinearRight1';
 export { IconLinearRight2, type IconLinearRight2Props } from '../components/IconLinearRight2';
 export { IconLinearRight3, type IconLinearRight3Props } from '../components/IconLinearRight3';
-export { IconLinearRightCircle1, type IconLinearRightCircle1Props } from '../components/IconLinearRightCircle1';
-export { IconLinearRightCircle2, type IconLinearRightCircle2Props } from '../components/IconLinearRightCircle2';
